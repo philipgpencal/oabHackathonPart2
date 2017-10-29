@@ -60,6 +60,7 @@
 
     node.innerHTML = response ? response : "[empty response]";
     node.setAttribute('data-actual-response', response);
+    node.scrollIntoView();
   }
 
 })();
