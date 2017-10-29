@@ -67,7 +67,8 @@ form {
     margin-left: 15px;
     border-radius: 30px 30px 0px 30px;
    background: #0A1D5A;
-   font-size: 1.2em;
+   font-size: 1.3em;
+   font-weight: 300;
     
 }
 
@@ -82,7 +83,8 @@ form {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-radius: 0px 30px 30px 30px;
     background: #0093D3;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    font-weight: 300;
     
     
 }
