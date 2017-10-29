@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Harvey</title>
+	<link rel="icon" type="image/png" href="https://storage.googleapis.com/cloudprod-apiai/5eed407a-8084-43d9-b1d9-4939b7047b1d_xs.png">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+	<div class="b-agent">
+		<div class="b-agent-header">
+			<div class="b-agent-header-icon">
+				<div class="b-agent-header-icon-align-helper">
+					<img id="agent-avatar" src="https://storage.googleapis.com/cloudprod-apiai/5eed407a-8084-43d9-b1d9-4939b7047b1d_s.png"
+						srcset="https://storage.googleapis.com/cloudprod-apiai/5eed407a-8084-43d9-b1d9-4939b7047b1d_s.png 2x, https://storage.googleapis.com/cloudprod-apiai/5eed407a-8084-43d9-b1d9-4939b7047b1d_xs.png">
+				</div>
+			</div>
+			<div class="b-agent-header-wrapper">
+				<div class="b-agent-header-agent-name">Harvey</div>
+				<div class="b-agent-header-description">O Robo Advogado</div>
+			</div>
+		</div>
+		<div class="b-agent-result" id="resultWrapper">
+			<table class="b-agent-result-table">
+				<tr>
+					<td id="result"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="clearfix"></div>
+		<div class="b-agent-input">
+			<div id="agentForm">
+				<input type="text" id="q" placeholder="Diga alguma coisa...">
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="./package/ApiAi.min.js"></script>
+	<script src="service.js"></script>
+	<script src="controller.js"></script>
+</body>
+
+</html>
