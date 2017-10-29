@@ -11,6 +11,10 @@
     resultDiv = document.getElementById("result");
 
     queryInput.addEventListener("keydown", queryInputKeyDown);
+
+    document.getElementById("welcome1").innerHTML = new Date().toLocaleString();
+    document.getElementById("welcome2").innerHTML = new Date().toLocaleString();
+    document.getElementById("welcome3").innerHTML = new Date().toLocaleString();
   }
 
   function queryInputKeyDown(event) {
@@ -40,9 +44,11 @@
   }
 
   function createQueryNode(query) {
+    var dateAndTime = '<span>' + new Date().toLocaleString() + '</span>';
+    
     var node = document.createElement('div');
     node.className = "user-request";
-    node.innerHTML = query;
+    node.innerHTML = dateAndTime + query;
     resultDiv.appendChild(node);
   }
 
@@ -57,8 +63,9 @@
   function setResponseOnNode(response, node) {
     
     response = response.replace(/\n/g, "<br>");
-
-    node.innerHTML = response ? response : "[empty response]";
+    var dateAndTime = '<span>' + new Date().toLocaleString() + '</span>';
+    
+    node.innerHTML = response ? dateAndTime + response : "[empty response]";
     node.setAttribute('data-actual-response', response);
     node.scrollIntoView();
   }
