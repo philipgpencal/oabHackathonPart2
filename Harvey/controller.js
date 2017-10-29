@@ -2,15 +2,17 @@
   "use strict";
 
   var ENTER_KEY_CODE = 13;
-  var queryInput, resultDiv;
+  var queryInput, resultDiv, btnSendMsg;
 
   window.onload = init;
 
   function init() {
     queryInput = document.getElementById("q");
     resultDiv = document.getElementById("result");
+    btnSendMsg = document.getElementById("btnSendMsg");
 
     queryInput.addEventListener("keydown", queryInputKeyDown);
+    btnSendMsg.addEventListener("click", sendMessageButtonClick);
 
     document.getElementById("welcome1").innerHTML = new Date().toLocaleString();
     document.getElementById("welcome2").innerHTML = new Date().toLocaleString();
@@ -21,6 +23,15 @@
     if (event.which !== ENTER_KEY_CODE) {
       return;
     }
+
+    setAndReceiveMessage();
+  }
+
+  function sendMessageButtonClick() {
+    setAndReceiveMessage();
+  }
+
+  function setAndReceiveMessage() {
 
     var value = queryInput.value;
     queryInput.value = "";
